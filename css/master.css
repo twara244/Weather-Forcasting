@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6e6363;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #6e6363;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#citySelector {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+#fetchWeather {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#fetchWeather:hover {
+    background-color: #0056b3;
+}
+/* 
+#weatherDisplay {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:last-child {
+    border-bottom: none;
+} */
+/* Style for the entire card container */
+.weather-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: auto; 
+}
+
+/* Individual card styling */
+.weather-card {
+    background-color: #f9f9f9;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 120px; 
+    height: 200px; 
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.card-header {
+    font-size: 12px;    
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temperature {
+    font-size: 16px;
+}
+
+img.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
