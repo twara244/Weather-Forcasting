@@ -51,7 +51,7 @@ fetchWeatherButton.addEventListener('click', () => {
 
                 weatherHTML += `
                     <div class="weather-card">
-                        <div class="card-header">${formattedDate}</div>
+                        <div class="card-header">${formattedDate}<br> ${dayData.weather}</div>
                         <div class="card-body">
                             <img class="weather-icon" src="${weatherImage}" alt="${dayData.weather}">
                             <div class="temperature">Temperature: ${dayData.temp2m}°C</div>
@@ -71,11 +71,22 @@ function getWeatherImage(weather) {
     // This is a simplified mapping of weather conditions to images
     // Make sure the image paths are correct based on your file structure
     const weatherImages = {
-        clear: './images/clear.png',
-        pcloudy: './images/pcloudy.png',
-        mcloudy: './images/mcloudy.png',
-        cloudy: './images/cloudy.png',
-        lightrain: './images/lightrain.png',
+        clearday: './images/clear.png',
+        clearnight: './images/clear.png',
+        pcloudyday: './images/pcloudy.png',
+        pcloudynight: './images/pcloudy.png',
+        mcloudyday: './images/mcloudy.png',
+        mcloudynight: './images/mcloudy.png',
+        cloudyday: './images/cloudy.png',
+        cloudynight: './images/cloudy.png',
+        lightrainday: './images/lightrain.png',
+        lightrainnight: './images/lightrain.png',
+        ishowerday: './images/ishower.png',
+        ishowernight: './images/ishower.png',
+        oshowerday: './images/oshower.png',
+        oshowerday: './images/oshower.png',
+        humidday: './images/humid.png',
+        humidnight: './images/humid.png',
         rain: './images/rain.png',
         lightsnow: './images/lightsnow.png',
         snow: './images/snow.png'
@@ -83,29 +94,6 @@ function getWeatherImage(weather) {
     
 
     const lowerCaseWeather = weather.toLowerCase();
+    console.log(lowerCaseWeather)
     return weatherImages[lowerCaseWeather] || 'images/default.png';
 }
-function formatWeatherName(weatherType) {
-    if (weatherType == "ishower") {
-      return "Isolated Showers";
-    } else if (weatherType == "lightrain") {
-      return "Light Rain";
-    } else if (weatherType == "lightsnow") {
-      return "Light Snow";
-    } else if (weatherType == "mcloudy") {
-      return "Medium Cloudy";
-    } else if (weatherType == "mcloudy") {
-      return "Occasional Showers";
-    } else if (weatherType == "ts") {
-      return "Thunderstorm";
-    } else if (weatherType == "pcloudy") {
-      return "Partially Cloudy";
-    } else if (weatherType == "rainsnow") {
-      return "Rain Snow";
-    } else if (weatherType == "tsrain") {
-      return "Thunderstorm with Rain";
-    } else {
-      return weatherType.substring(0, 1).toUpperCase() + weatherType.substring(1);
-    }
-  }
-  
