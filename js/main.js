@@ -9,7 +9,7 @@ fetch('city_coordinates.csv')
             const cityName = city.toLowerCase().trim();
             cityCoordinates[cityName] = { lat: parseFloat(latitude), lon: parseFloat(longitude) };
 
-            // Dynamically add city options to the selector
+            // Dynamically adding city options to the selector
             const option = document.createElement('option');
             option.value = cityName;
             option.textContent = `${city}, ${country}`;
@@ -43,11 +43,12 @@ fetchWeatherButton.addEventListener('click', () => {
 
             for (let index = 0; index < 7; index++) {
                 const forecastDate = new Date(currentDate);
-                forecastDate.setDate(currentDate.getDate() + index); // Increment date for each forecast
+                forecastDate.setDate(currentDate.getDate() + index); 
 
                 const dayData = forecastData[index];
-                const formattedDate = forecastDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-                const weatherImage = getWeatherImage(dayData.weather); // Use the updated function
+                const formattedDate = forecastDate.toLocaleDateString('en-US', { weekday: 'short'
+                , year: 'numeric', month: 'short', day: 'numeric' });
+                const weatherImage = getWeatherImage(dayData.weather); 
 
                 weatherHTML += `
                     <div class="weather-card">
@@ -68,8 +69,6 @@ fetchWeatherButton.addEventListener('click', () => {
         });
 });
 function getWeatherImage(weather) {
-    // This is a simplified mapping of weather conditions to images
-    // Make sure the image paths are correct based on your file structure
     const weatherImages = {
         clearday: './images/clear.png',
         clearnight: './images/clear.png',
