@@ -1,8 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background-image:url("./Premium Photo _ Wonderful blue sky and white clouds panorama.jpeg");                  
-    margin: 0;
-    padding: 0;
 }
 .bg_image {
     display: flex;
