@@ -1,8 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #6e6363;
+    background-image:url("./Premium Photo _ Wonderful blue sky and white clouds panorama.jpeg");                  
     margin: 0;
     padding: 0;
+}
+.bg_image {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100% ;
+    /* height: 100%; */
+    /* background-image: url('path/to/your/image.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
 }
 
 #container {
@@ -35,15 +49,18 @@ h1 {
     width: 100%;
     padding: 10px;
     font-size: 16px;
+    width:max-content;
+    margin-left: 45%;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #ffffff;
+    /* background-color: #007bff; */
+    color: hsl(92, 57%, 44%);
     cursor: pointer;
+    z-index: -1;
 }
 
 #fetchWeather:hover {
-    background-color: #0056b3;
+    background-color: #94f48e;
 }
 /* 
 #weatherDisplay {
@@ -80,8 +97,8 @@ li:last-child {
 
 /* Individual card styling */
 .weather-card {
-    background-color: #f9f9f9;
-    border: 2px solid #3498db;
+    background-color: #cdfbbb;
+    /* border: 2px solid #0b283b; */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -94,12 +111,13 @@ li:last-child {
 
 .weather-card:hover {
     transform: scale(1.05);
-    background-color: #3498db;
+    background-color: #416233;
     color: #ffffff;
     border-color: #ffffff;
 }
 
 .card-header {
+    margin-right: 5%;
     font-size: 12px;    
     font-weight: bold;
     margin-bottom: 15px;
@@ -122,7 +140,7 @@ li:last-child {
 }
 
 img.weather-icon {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 90px;
     margin-right: 10px;
 }
