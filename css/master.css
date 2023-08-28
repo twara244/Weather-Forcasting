@@ -62,31 +62,6 @@ h1 {
 #fetchWeather:hover {
     background-color: #94f48e;
 }
-/* 
-#weatherDisplay {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li:last-child {
-    border-bottom: none;
-} */
 /* Style for the entire card container */
 .weather-cards {
     display: flex;
